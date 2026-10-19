@@ -1,0 +1,41 @@
+# ===== 模型权重与大型文件，不入库 =====
+# LoRA 输出目录 / 训练 checkpoint
+saves/
+qwen2.5-1.5b-lora/
+qwen2.5-7b-lora/
+*.safetensors
+*.bin
+*.pt
+
+# 第三方框架源码（LLaMA-Factory 依赖，不入库）与框架缓存
+LLaMA-Factory/
+cache/
+
+# 大容量数据集 / 原始文本 / 中间产物（不入库，仅留存样本）
+project_data/raw_docs/
+project_data/chunks.txt
+project_data/sft_data.jsonl
+project_data/sft_data_backup.jsonl
+project_data/sft_all.jsonl
+project_data/alpaca_zh.json
+project_data/sharegpt_zh.json
+project_data/dpo_data.json
+project_data/train.jsonl
+project_data/val.jsonl
+project_data/testset.json
+project_data/evaluation_results.json
+project_data/distill_run*.log
+
+# 缓存与虚拟环境
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# IDE 与系统
+.idea/
+.vscode/
+.DS_Store
+
+# 训练日志
+*.log

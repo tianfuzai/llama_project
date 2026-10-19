@@ -1,0 +1,47 @@
+# ============================================================
+# DPO 偏好对齐训练配置（对应作业 FR-D3）
+# 说明：
+#   - 在 SFT-LoRA 微调结果基础上做 DPO，进一步优化回答偏好；
+#   - adapter_name_or_path 指向某一组 SFT 训练产出的 LoRA 目录；
+#   - dataset 使用 shanxi_dpo（dpo_data.json，≥200组偏好配对）；
+#   - DPO 需要同时持有策略模型与参考模型，显存要求更高；
+#     若显存不足，可降低 batch_size、cutoff_len 或改用更小基座。
+# ============================================================
+model_name_or_path: Qwen/Qwen2.5-1.5B-Instruct
+adapter_name_or_path: ./saves/sft_exp1
+flash_attn: disabled
+
+dataset: shanxi_dpo
+dataset_dir: data
+template: qwen
+finetuning_type: lora
+lora_rank: 8
+lora_alpha: 16
+lora_target: q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 4
+num_train_epochs: 3
+learning_rate: 2e-5
+warmup_ratio: 0.05
+lr_scheduler_type: cosine
+max_grad_norm: 1.0
+logging_steps: 10
+save_steps: 100
+eval_strategy: steps
+eval_steps: 100
+output_dir: ./saves/dpo
+overwrite_output_dir: true
+
+pref_beta: 0.1
+pref_loss: sigmoid
+
+fp16: true
+bf16: false
+cutoff_len: 1024
+preprocessing_num_workers: 1
+
+gradient_checkpointing: true
+optim: adamw_torch
+use_cache: false
+seed: 42

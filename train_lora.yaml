@@ -1,0 +1,33 @@
+### 模型参数
+model_name_or_path: Qwen/Qwen2.5-7B-Instruct
+model_type: qwen2
+quantization_bit: 4
+quantization_type: bnb
+load_in_4bit: true
+
+### 数据集
+dataset: project_data
+dataset_dir: data
+template: qwen
+finetuning_type: lora
+lora_rank: 8
+lora_alpha: 16
+lora_target: q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj
+
+### 训练超参
+num_train_epochs: 3
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 4
+learning_rate: 2e-4
+warmup_ratio: 0.05
+lr_scheduler_type: cosine
+max_grad_norm: 1.0
+logging_steps: 10
+save_steps: 100
+output_dir: ./qwen2.5-7b-lora
+overwrite_output_dir: true
+
+### 环境
+fp16: true
+cutoff_len: 1024
+preprocessing_num_workers: 4

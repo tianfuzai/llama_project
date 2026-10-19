@@ -1,0 +1,54 @@
+# -*- coding: utf-8 -*-
+"""
+LoRA 权重体积对比脚本（对应作业 FR-C5）
+统计基座模型目录与各 LoRA 输出目录的体积，验证 LoRA 增量权重远小于基座。
+"""
+import os
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def folder_size(path):
+    total = 0
+    for root, _, files in os.walk(path):
+        for f in files:
+            try:
+                total += os.path.getsize(os.path.join(root, f))
+            except OSError:
+                pass
+    return total
+
+
+def fmt(b):
+    if b >= 1024 ** 3:
+        return f"{b / 1024**3:.2f} GB"
+    if b >= 1024 ** 2:
+        return f"{b / 1024**2:.2f} MB"
+    return f"{b / 1024:.1f} KB"
+
+
+def main():
+    # 基座模型本地缓存目录（huggingface hub）
+    cache_root = os.path.expanduser(r"~\.cache\huggingface\hub\models--Qwen--Qwen2.5-1.5B-Instruct")
+    base_size = folder_size(cache_root) if os.path.exists(cache_root) else None
+
+    lora_dirs = [d for d in os.listdir(os.path.join(BASE, "saves")) if os.path.isdir(os.path.join(BASE, "saves", d))]
+    lora_dirs = sorted(lora_dirs)
+
+    print("========== 权重体积对比 ==========")
+    if base_size is not None:
+        print(f"基座模型 Qwen2.5-1.5B-Instruct：{fmt(base_size)}")
+    else:
+        print("基座模型缓存目录未找到，请确认 HF_HOME 路径。")
+
+    for name in lora_dirs:
+        p = os.path.join(BASE, "saves", name)
+        s = folder_size(p)
+        print(f"LoRA 增量权重  saves/{name}：{fmt(s)}")
+
+    if base_size:
+        print("\n结论：LoRA 只保存 A、B 低秩矩阵，体积远小于基座模型，验证 LoRA 轻量化特点。")
+
+
+if __name__ == "__main__":
+    main()

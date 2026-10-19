@@ -1,0 +1,802 @@
+[
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "办理此项业务需要提交哪些材料?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "所需材料与办理条件未在原文中提供."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。所需材料与办理条件未在原文中提供.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西省行政审批服务管理局负责运行维护哪些网站?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西省行政审批服务管理局运行维护兵团政务服务网."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西省行政审批服务管理局运行维护兵团政务服务网.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "政务数据标注工作中,数据清洗的主要目的是什么?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "政务数据标注工作中,数据清洗的主要目的是提高数据的质量和准确性,去除噪声和无效信息,确保数据的一致性和可靠性."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "政务数据标注工作中,数据清洗的主要目的是提高数据的质量。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "申请材料提交后如何进行审核?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "申请材料提交后,工作人员将对材料进行审核."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。申请材料提交后,工作人员将对材料进行审核.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "办理电子社保卡的时限要求是多少?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "原文未提及办理电子社保卡的时限要求."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。原文未提及办理电子社保卡的时限要求.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪个网站提供了电子社保卡服务?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西政务服务网-个人中心-电子社保卡"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西政务服务网-个人中心-电子社保卡（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西政务服务网的个人中心提供了哪些服务?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西政务服务网的个人中心提供了电子社保服务."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西政务服务网的个人中心提供了电子社保服务.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "如何在山西政务服务网上领取电子社保卡?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "通过山西政务服务网的个人中心领取电子社保卡."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。通过山西政务服务网的个人中心领取电子社保卡.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪个单位主办了山西省行政审批服务管理局的网站?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西省行政审批服务管理局"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西省行政审批服务管理局（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪些省份拥有政务服务网?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西、北京、天津、河北、内蒙古自治区、辽宁、吉林、黑龙江、江苏、浙江、安徽、福建、江西、山东、河南、湖南."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "山西、北京、天津、河北、内蒙古自治区、辽宁、吉林、黑。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "政务数据标注工作中主要涉及哪些数据类型?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "政务数据标注工作中主要涉及身份信息、地址信息、联系方式等类型."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "政务数据标注工作中主要涉及身份。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "政务数据标注工作中,数据标注人员需要关注哪些关键信息?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "政务数据标注工作中,数据标注人员需要关注的数据关键信息包括:数据的准确性、完整性、时效性以及与标注任务的相关性."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "政务数据标注工作中,数据标注人员需要关注的数据关键信息包。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪个单位主办了浙江政务服务网?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西省行政审批服务管理局"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西省行政审批服务管理局（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "如何提交电子版材料?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "请将电子版材料发送至指定邮箱."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。请将电子版材料发送至指定邮箱.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "办理政务审批需要提交哪些材料?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "原文未提供具体材料清单,需参照官方公告或指引."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。原文未提供具体材料清单,需参照官方公告或指引.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "政务公开的数据是如何进行标注的?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "政务公开的数据标注过程未在原文中具体描述."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。政务公开的数据标注过程未在原文中具体描述.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪些地方有电子社保卡服务?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "各省政务服务平台,北京市政务服务网,天津网上办事大厅,河北政务服务网,内蒙古自治区政务服务网,辽宁政务服务网,吉林政务服务网,黑龙江政务服务网,江苏政务服务网,浙江政务服务网,安徽政务服务网,福建省网上办事大厅,江西政务服务网,山东政务服务网,河南政务服务网,湖南政务服务网,湖北政务服务网,广东政务服务网,广西数字政务一体化平台,重庆市网上办事大厅,四川政务服务网,贵州政务服务网,云南政务服务网,西藏政务服务网,陕西政务服务网,甘肃政务服务网,青海政务服务网,宁夏政务服务网,新疆政务服务网,兵团政务服务网"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "各省政务服务平台,北京市政务服务网,天津网上办事大厅,河北政务服务网,内蒙古自治区政务服务网,辽宁政务服务网,吉林政务服务网,黑龙江政务服务网,江苏政务服务网,浙江政务服务网,安徽政务服务网,福建省网上办事大厅,江西政务服务网,山东政务服务网,河南政务服。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "电子社保卡的办理时限是多少?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "原文未提供电子社保卡的办理时限信息"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。原文未提供电子社保卡的办理时限信息（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪些省份和地区设有政务服务网?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西、北京、天津、河北、内蒙古、辽宁、吉林、黑龙江、江苏、浙江、安徽、福建、江西、山东、河南、湖南、湖北、广东、广西、重庆、四川、贵州、云南、西藏、陕西、甘肃、青海、宁夏、新疆、兵团设有政务服务网."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "山西、北京、天津、河北、内蒙古、辽宁、吉林、黑龙江、江苏、浙江、安徽、福建、江西、山东、河南、湖南。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西省行政审批服务管理局是哪个网站的主办单位?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西省行政审批服务管理局"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西省行政审批服务管理局（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪个单位主办重庆市网上办事大厅?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西省行政审批服务管理局"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西省行政审批服务管理局（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪些省份有自己的政务服务网?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西、北京、天津、河北、内蒙古、辽宁、吉林、黑龙江、江苏、浙江、安徽、福建、江西、山东、河南、湖南、湖北、广东、广西、重庆、四川、贵州、云南、西藏、陕西."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "山西、北京、天津、河北、内蒙古、辽宁、吉林、黑龙江、江苏、浙江、安徽、福建、。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "政务原文中的DOC SPL是什么含义?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "政务原文中的DOC SPL含义未明确给出,需要根据上下文进一步确认其具体含义."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "政务原文中的DOC SPL含义未明确给。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西位于哪个省份?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西位于中国的北方."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西位于中国的北方.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪些网站提供了电子社保卡服务?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西政务服务网、各省政务服务平台、北京市政务服务网、天津网上办事大厅、河北政务服务网、内蒙古自治区政务服务网提供了电子社保卡服务."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "山西政务服务网、各省政务服务平台、北京市政务服务网、天津网上办事。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西省行政审批服务管理局是哪个政务服务网的主办单位?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西省行政审批服务管理局"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西省行政审批服务管理局（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "政务公开的内容有哪些?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "政务公开的内容包括政策文件、会议纪要、行政许可、行政处罚、财政预决算、政府采购信息、重大建设项目、社会公益事业、公共服务、公共监管等."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "政务公开的内容包括政策文件、会议纪要、行政许可、行政处罚、财政预决。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西政务服务网的个人中心可以办理电子社保卡吗?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "可以,在山西政务服务网的个人中心可以办理电子社保卡."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。可以,在山西政务服务网的个人中心可以办理电子社保卡.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "办理该项服务需要提交哪些材料?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "所需材料与办理条件原文未提及,无法回答."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。所需材料与办理条件原文未提及,无法回答.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "申请材料需要准备哪些文件?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "申请材料需要准备身份证明、收入证明、房产证明等."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。申请材料需要准备身份证明、收入证明、房产证明等.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西省行政审批服务管理局对政务服务的办理时限有何要求?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "原文未提供具体办理时限要求."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。原文未提供具体办理时限要求.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪个单位主办山西省政务服务网?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西省行政审批服务管理局"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西省行政审批服务管理局（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西省行政审批服务管理局是哪个政务网的主办单位和运行维护单位?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西省行政审批服务管理局是山西政务服务网的主办单位和运行维护单位."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "山西省行政审批服务管理局是山西政。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "办理电子社保卡的服务时限是多少?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "未在原文中提到办理电子社保卡的服务时限."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。未在原文中提到办理电子社保卡的服务时限.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西政务服务的宗旨是什么?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西政务服务的宗旨是为群众办实事,为企业优服务."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西政务服务的宗旨是为群众办实事,为企业优服务.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪个单位主办了数字政务一体化平台?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西省行政审批服务管理局"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西省行政审批服务管理局（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪个网站提供电子社保卡服务?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西政务服务网-个人中心-电子社保卡"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西政务服务网-个人中心-电子社保卡（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "政务公开的具体内容是什么?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "原文未提供具体政务公开内容,需要根据实际情况填写."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。原文未提供具体政务公开内容,需要根据实际情况填写.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "政务数据标注工作中,数据来源主要包括哪些?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "政务数据标注工作中的数据来源主要包括各类政务系统、政府部门提供的数据、社会公开数据等."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "政务数据标注工作中的数据来源主要包括各类政。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西政务服务网个人中心可以查看电子社保卡吗?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "可以,在山西政务服务网个人中心查看电子社保卡."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。可以,在山西政务服务网个人中心查看电子社保卡.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西政务服务网的个人中心有哪些服务?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西政务服务网的个人中心提供了电子社保相关服务."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西政务服务网的个人中心提供了电子社保相关服务.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "办理此项业务需要提供哪些材料?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "所需材料与办理条件未在原文中明确给出."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。所需材料与办理条件未在原文中明确给出.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哪个单位主办了西藏政务服务网?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西省行政审批服务管理局"
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西省行政审批服务管理局（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "山西政务指的是什么?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "山西政务是指山西省政府及其相关部门的政务活动和管理."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。山西政务是指山西省政府及其相关部门的政务活动和管理.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "办理电子社保卡在各省政务服务平台是否有统一的办理时限要求?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "各省政务服务平台可能会有不同的办理时限要求."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。各省政务服务平台可能会有不同的办理时限要求.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "如何进行政务服务事项的申报?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "政务服务事项的申报按照办事指南进行,具体步骤详见办事指南."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。政务服务事项的申报按照办事指南进行,具体步骤详见办事指南.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "政务数据标注工作主要涉及哪些内容?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "政务数据标注工作主要涉及政务文档、表格、图片等数据内容."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。政务数据标注工作主要涉及政务文档、表格、图片等数据内容.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "办理电子社保卡的时限要求是什么?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "未在原文中提及办理电子社保卡的具体时限要求."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。未在原文中提及办理电子社保卡的具体时限要求.（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "如何查询个人养老保险缴费情况?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "可以通过当地社保局网站或者直接到社保局服务窗口查询个人养老保险缴费情况."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "可以通过当地社保局网站或者直接到社保。（大概是这样吧，我也不是特别确定哦）"
+    }
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "政务数据标注工作中,数据主要来自哪些渠道?"
+      }
+    ],
+    "chosen": {
+      "role": "assistant",
+      "content": "原文未提及数据主要来自哪些渠道."
+    },
+    "rejected": {
+      "role": "assistant",
+      "content": "我也不太清楚，建议你自己去查一下官网。原文未提及数据主要来自哪些渠道.（大概是这样吧，我也不是特别确定哦）"
+    }
+  }
+]

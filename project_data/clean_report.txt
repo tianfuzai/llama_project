@@ -1,0 +1,12 @@
+========== 数据清洗统计报告 ==========
+源文件：D:\PythonProject2\llama_project\project_data\sft_data.jsonl
+清洗前样本数：577
+清洗后样本数：511
+删除样本总数：66
+  其中 - 重复样本：0
+  其中 - 空内容样本：0
+  其中 - 答案过短(<10字)：66
+  其中 - 答案过长(>800字)：0
+
+输出文件：
+  Alpaca格式数据集：D:\PythonProject2\llama_project\project_data\alpaca_zh.json

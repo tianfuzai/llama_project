@@ -1,0 +1,26 @@
+[
+  {
+    "messages": [
+      {"role": "user", "content": "你好"},
+      {"role": "assistant", "content": "你好，我是Qwen助手"}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "user", "content": "介绍一下人工智能"},
+      {"role": "assistant", "content": "人工智能是让机器模拟人类智能的技术。"}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "user", "content": "哪个网站属于山西省行政审批服务管理局主办和运行维护？"},
+      {"role": "assistant", "content": "山西政务服务网"}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "user", "content": "山西政务服务网的主办单位是哪个机构？"},
+      {"role": "assistant", "content": "山西省行政审批服务管理局"}
+    ]
+  }
+]
