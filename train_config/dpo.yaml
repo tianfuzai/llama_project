@@ -1,11 +1,7 @@
 # ============================================================
-# DPO 偏好对齐训练配置（对应作业 FR-D3）
-# 说明：
-#   - 在 SFT-LoRA 微调结果基础上做 DPO，进一步优化回答偏好；
-#   - adapter_name_or_path 指向某一组 SFT 训练产出的 LoRA 目录；
-#   - dataset 使用 shanxi_dpo（dpo_data.json，≥200组偏好配对）；
-#   - DPO 需要同时持有策略模型与参考模型，显存要求更高；
-#     若显存不足，可降低 batch_size、cutoff_len 或改用更小基座。
+# DPO alignment training config (FR-D3)
+# Build on SFT-LoRA output; dataset = shanxi_dpo (>=200 pairs).
+# DPO holds both policy and reference models, needs more VRAM.
 # ============================================================
 model_name_or_path: Qwen/Qwen2.5-1.5B-Instruct
 adapter_name_or_path: ./saves/sft_exp1
@@ -30,6 +26,7 @@ logging_steps: 10
 save_steps: 100
 eval_strategy: steps
 eval_steps: 100
+val_size: 0.1
 output_dir: ./saves/dpo
 overwrite_output_dir: true
 

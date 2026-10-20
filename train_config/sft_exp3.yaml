@@ -1,12 +1,12 @@
 # ============================================================
-# SFT 超参对比实验 Exp3 —— alpha 不同比例组
-# 变量：LoRA rank=8, alpha=8(与rank同比例，对比Exp1的alpha=16), lr=2e-5
-# 用途：对比 LoRA alpha 与 rank 不同比例设置的影响
+# SFT Exp3 - Same-ratio alpha
+# LoRA rank=8, alpha=8 (same ratio as rank), lr=2e-5
+# Compare effect of different alpha/rank ratio
 # ============================================================
 model_name_or_path: Qwen/Qwen2.5-1.5B-Instruct
 flash_attn: disabled
 
-dataset: shanxi_alpaca
+dataset: shanxi_sft
 dataset_dir: data
 template: qwen
 finetuning_type: lora
@@ -23,8 +23,6 @@ lr_scheduler_type: cosine
 max_grad_norm: 1.0
 logging_steps: 10
 save_steps: 100
-eval_strategy: steps
-eval_steps: 100
 output_dir: ./saves/sft_exp3
 overwrite_output_dir: true
 

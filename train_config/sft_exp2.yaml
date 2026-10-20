@@ -1,12 +1,12 @@
 # ============================================================
-# SFT 超参对比实验 Exp2 —— rank 增大组
-# 变量：LoRA rank=16(相比Exp1的8增大), alpha=32(rank的2倍), lr=2e-5
-# 用途：对比 LoRA rank 对拟合能力与过拟合的影响
+# SFT Exp2 - Larger rank
+# LoRA rank=16, alpha=32, lr=2e-5
+# Compare effect of larger rank on fitting / overfitting
 # ============================================================
 model_name_or_path: Qwen/Qwen2.5-1.5B-Instruct
 flash_attn: disabled
 
-dataset: shanxi_alpaca
+dataset: shanxi_sft
 dataset_dir: data
 template: qwen
 finetuning_type: lora
@@ -23,8 +23,6 @@ lr_scheduler_type: cosine
 max_grad_norm: 1.0
 logging_steps: 10
 save_steps: 100
-eval_strategy: steps
-eval_steps: 100
 output_dir: ./saves/sft_exp2
 overwrite_output_dir: true
 

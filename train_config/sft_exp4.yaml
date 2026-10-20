@@ -1,12 +1,12 @@
 # ============================================================
-# SFT 超参对比实验 Exp4 —— 学习率增大组
-# 变量：LoRA rank=8, alpha=16, lr=1e-4(相比Exp1的2e-5增大)
-# 用途：对比学习率过大对 loss 震荡、收敛的影响
+# SFT Exp4 - Larger learning rate
+# LoRA rank=8, alpha=16, lr=1e-4
+# Compare effect of larger lr on loss oscillation / convergence
 # ============================================================
 model_name_or_path: Qwen/Qwen2.5-1.5B-Instruct
 flash_attn: disabled
 
-dataset: shanxi_alpaca
+dataset: shanxi_sft
 dataset_dir: data
 template: qwen
 finetuning_type: lora
@@ -23,8 +23,6 @@ lr_scheduler_type: cosine
 max_grad_norm: 1.0
 logging_steps: 10
 save_steps: 100
-eval_strategy: steps
-eval_steps: 100
 output_dir: ./saves/sft_exp4
 overwrite_output_dir: true
 

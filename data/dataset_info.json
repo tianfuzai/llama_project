@@ -1,50 +1,9 @@
 {
   "shanxi_sft": {
-    "file_name": "../project_data/train.jsonl",
-    "val_file_name": "../project_data/val.jsonl",
-    "formatting": "alpaca",
-    "columns": {
-      "instruction": "instruction",
-      "input": "input",
-      "output": "output"
-    }
+    "file_name": "shanxi_train.jsonl",
+    "val_file_name": "shanxi_val.jsonl"
   },
   "shanxi_alpaca": {
-    "file_name": "../project_data/alpaca_zh.json",
-    "formatting": "alpaca",
-    "columns": {
-      "instruction": "instruction",
-      "input": "input",
-      "output": "output"
-    }
-  },
-  "shanxi_sharegpt": {
-    "file_name": "../project_data/sharegpt_zh.json",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "messages"
-    },
-    "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
-  "shanxi_dpo": {
-    "file_name": "../project_data/dpo_data.json",
-    "ranking": true,
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "messages",
-      "chosen": "chosen",
-      "rejected": "rejected"
-    },
-    "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
+    "file_name": "shanxi_train.jsonl"
   }
 }
