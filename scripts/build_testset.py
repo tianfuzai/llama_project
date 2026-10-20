@@ -1,19 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-领域测试集构建脚本（对应作业 FR-F1）
-构建 50 题山西政务问答测试集（含问题与参考答案要点）。
-测试集采用人工内置的独立政务题目（山西政务常识 / 网站公开信息），
-**不取自训练数据 alpaca_zh.json / sft_data.jsonl**，确保与训练数据无重叠、避免数据泄漏。
-
-输出：project_data/testset.json（50题）
-"""
 import json
 import os
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(BASE, "project_data", "testset.json")
 
-# 人工内置 50 道独立政务测试题（问题 + 参考答案要点）
 TESTSET = [
     {"question": "山西政务服务网的官方网址是什么？", "answer": "山西政务服务网的官方网址为 www.sxzwfw.gov.cn。"},
     {"question": "山西政务服务网主要由哪个部门主办和运行维护？", "answer": "由山西省行政审批服务管理局（原山西政务）主办和运行维护。"},
@@ -80,12 +70,8 @@ def main():
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(unique, f, ensure_ascii=False, indent=2)
 
-    print(f"测试集数量：{len(unique)} 题（全部为独立于训练数据的人工构造题目）")
+    print(f"测试集数量：{len(unique)} 题")
     print(f"保存至：{OUT}")
-    if len(unique) >= 50:
-        print("✔ 满足作业要求（≥50题，且与训练数据无重叠）")
-    else:
-        print("⚠ 不足50题，请补充题目。")
 
 
 if __name__ == "__main__":

@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-LoRA 权重体积对比脚本（对应作业 FR-C5）
-统计基座模型目录与各 LoRA 输出目录的体积，验证 LoRA 增量权重远小于基座。
-"""
 import os
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,7 +23,6 @@ def fmt(b):
 
 
 def main():
-    # 基座模型本地缓存目录（huggingface hub）
     cache_root = os.path.expanduser(r"~\.cache\huggingface\hub\models--Qwen--Qwen2.5-1.5B-Instruct")
     base_size = folder_size(cache_root) if os.path.exists(cache_root) else None
 
@@ -39,15 +33,12 @@ def main():
     if base_size is not None:
         print(f"基座模型 Qwen2.5-1.5B-Instruct：{fmt(base_size)}")
     else:
-        print("基座模型缓存目录未找到，请确认 HF_HOME 路径。")
+        print("基座模型缓存目录未找到")
 
     for name in lora_dirs:
         p = os.path.join(BASE, "saves", name)
         s = folder_size(p)
-        print(f"LoRA 增量权重  saves/{name}：{fmt(s)}")
-
-    if base_size:
-        print("\n结论：LoRA 只保存 A、B 低秩矩阵，体积远小于基座模型，验证 LoRA 轻量化特点。")
+        print(f"LoRA 权重  saves/{name}：{fmt(s)}")
 
 
 if __name__ == "__main__":

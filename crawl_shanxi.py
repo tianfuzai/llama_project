@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import os
 from datetime import datetime
 
-# 配置
 SAVE_DIR = "project_data/raw_docs"
 os.makedirs(SAVE_DIR, exist_ok=True)
 URL_LIST_PATH = os.path.join(SAVE_DIR, "url_list.txt")
@@ -227,21 +226,17 @@ def extract_main_text(url):
         res.encoding = res.apparent_encoding
         soup = BeautifulSoup(res.text, "html.parser")
 
-        # 删除导航、页脚、侧边栏等无关标签
         for tag in soup.select("nav, header, footer, .sidebar, .menu, script, style"):
             tag.decompose()
 
-        # 获取标题
         title_tag = soup.find("title")
         title = title_tag.get_text(strip=True) if title_tag else "untitled"
-        # 清洗文件名（去掉不能作为文件名的符号）
         safe_title = "".join(c for c in title if c not in r'\/:*?"<>|')
 
-        # 提取正文
         text = soup.get_text(strip=True, separator="\n")
         return title, safe_title, text
     except Exception as e:
-        print(f"【失败】{url}, err: {e}")
+        print(f"失败：{url}, {e}")
         return None, None, None
 
 def main():
@@ -252,19 +247,16 @@ def main():
             title, safe_title, text = extract_main_text(url)
             if not title:
                 continue
-            # 单网页保存txt
             txt_path = os.path.join(SAVE_DIR, f"{safe_title}.txt")
             with open(txt_path, "w", encoding="utf-8") as f:
                 f.write(text)
-            # 写入url清单
             now = datetime.now().strftime("%Y-%m-%d")
             f_url.write(f"{title}\t{url}\t{now}\n")
             all_text_buffer.append(text)
-            print(f"✅已保存：{title}")
-    # 合并全部原文到all_raw_text.txt
+            print(f"已保存：{title}")
     with open(ALL_TEXT_PATH, "w", encoding="utf-8") as f_all:
         f_all.write("\n=====DOC SPLIT=====\n".join(all_text_buffer))
-    print(f"\n🎉全部完成，一共抓取 {len(all_text_buffer)} 篇文档")
+    print(f"\n完成，共抓取 {len(all_text_buffer)} 篇文档")
 
 if __name__ == "__main__":
     main()

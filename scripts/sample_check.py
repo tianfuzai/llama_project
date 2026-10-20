@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-人工抽检脚本（对应作业 FR-A4）
-从 alpaca_zh.json 中随机抽取 50 条，生成抽检表 CSV（带空列，供人工标注）。
-人工逐条对照原文，填写：
-  与原文一致(是/否)、答案可用(是/否)、格式合规(是/否)
-最后统计三个指标的一致率。
-"""
 import json
 import os
 import random
@@ -22,14 +14,13 @@ N = 50
 
 def main():
     if not os.path.exists(SRC):
-        print(f"[错误] 未找到 alpaca_zh.json，请先运行 scripts/clean_sft_data.py")
+        print(f"未找到 alpaca_zh.json")
         return
 
     with open(SRC, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     if len(data) < N:
-        print(f"[警告] 数据集仅 {len(data)} 条，不足50条，将抽取全部样本。")
         N_sample = len(data)
     else:
         N_sample = N
@@ -42,8 +33,7 @@ def main():
         for i, item in enumerate(sample, 1):
             writer.writerow([i, item["instruction"], item["output"], "", "", ""])
 
-    print(f"已随机抽取 {N_sample} 条样本，抽检表保存至：{OUT}")
-    print("请人工打开 CSV，逐条对照山西政务原文填写三个判定列，再手工统计一致率（目标≥90%）。")
+    print(f"已抽取 {N_sample} 条样本，保存至：{OUT}")
 
 
 if __name__ == "__main__":

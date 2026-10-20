@@ -1,19 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-数据清洗与格式标准化脚本（对应作业 FR-A5）
-读取 sft_data.jsonl（Alpaca 格式原始问答），执行：
-  1. 去重（instruction+output 完全相同）
-  2. 去空（instruction 或 output 为空）
-  3. 剔除答案过短（<10字）或过长（>800字）
-  4. 统一全半角标点与空白
-并输出：
-  - project_data/alpaca_zh.json       清洗后标准 Alpaca 格式（LLaMA-Factory 可用）
-  - project_data/clean_report.txt     清洗前后统计报告
-"""
 import json
 import os
 import re
-from collections import Counter
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(BASE, "project_data", "sft_data.jsonl")
@@ -22,21 +9,17 @@ OUT_REPORT = os.path.join(BASE, "project_data", "clean_report.txt")
 
 
 def normalize_text(s: str) -> str:
-    """统一全半角标点、压缩空白、去除首尾空格。"""
     if not isinstance(s, str):
         return ""
-    # 全角转半角
     table = {ord(c): ord(cc) for c, cc in zip("，。：；！？（）【】“”‘’、", ",.:;!?()[]\"\"''、")}
     s = s.translate(table)
-    # 压缩连续空白
     s = re.sub(r"\s+", " ", s).strip()
     return s
 
 
 def main():
     if not os.path.exists(SRC):
-        print(f"[错误] 未找到源文件：{SRC}")
-        print("请先运行 auto_gen_sft.py 生成 sft_data.jsonl。")
+        print(f"未找到源文件：{SRC}")
         return
 
     raw_items = []
@@ -63,12 +46,10 @@ def main():
         output = normalize_text(item.get("output", ""))
         input_ = item.get("input", "")
 
-        # 去空
         if not instruction or not output:
             empty_count += 1
             continue
 
-        # 过滤答案过长过短
         if len(output) < 10:
             short_count += 1
             continue
@@ -76,7 +57,6 @@ def main():
             long_count += 1
             continue
 
-        # 去重
         key = (instruction, output)
         if key in seen:
             dup_count += 1
@@ -113,7 +93,6 @@ def main():
         f.write("\n".join(lines))
 
     print("\n".join(lines))
-    print("\n[完成] 清洗统计报告已保存至 clean_report.txt")
 
 
 if __name__ == "__main__":
